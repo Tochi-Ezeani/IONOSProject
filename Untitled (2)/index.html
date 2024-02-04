@@ -1,0 +1,2657 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!-- force IE browsers in compatibility mode to use their most aggressive rendering engine -->
+
+    <meta charset="utf-8">
+    <title>ionos.com Status</title>
+    <meta name="description" content="Welcome to ionos.com&#39;s home for real-time and historical data on system performance.">
+
+    <!-- Mobile viewport optimization -->
+    <meta name="HandheldFriendly" content="True">
+    <meta name="MobileOptimized" content="320">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0">
+
+    <!-- Time this page was rendered - http://purl.org/dc/terms/issued -->
+    <meta name="issued" content="1706570981">
+
+    <!-- Mobile IE allows us to activate ClearType technology for smoothing fonts for easy reading -->
+    <meta http-equiv="cleartype" content="on">
+
+    <!-- Le fonts -->
+<style>
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-f0b2f7c12b6b87c65c02d3c1738047ea67a7607fd767056d8a2964cc6a2393f7.eot?host=www.ionos-status.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-f0b2f7c12b6b87c65c02d3c1738047ea67a7607fd767056d8a2964cc6a2393f7.eot?host=www.ionos-status.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-e642ffe82005c6208632538a557e7f5dccb835c0303b06f17f55ccf567907241.woff?host=www.ionos-status.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaLight-0f094da9b301d03292f97db5544142a16f9f2ddf50af91d44753d9310c194c5f.ttf?host=www.ionos-status.com') format('truetype');
+    font-weight:300;
+    font-style:normal;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-366d17769d864aa72f27defaddf591e460a1de4984bb24dacea57a9fc1d14878.eot?host=www.ionos-status.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-366d17769d864aa72f27defaddf591e460a1de4984bb24dacea57a9fc1d14878.eot?host=www.ionos-status.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-2ee4c449a9ed716f1d88207bd1094e21b69e2818b5cd36b28ad809dc1924ec54.woff?host=www.ionos-status.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegular-a40a469edbd27b65b845b8000d47445a17def8ba677f4eb836ad1808f7495173.ttf?host=www.ionos-status.com') format('truetype');
+    font-weight:400;
+    font-style:normal;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0bf83a850b45e4ccda15bd04691e3c47ae84fec3588363b53618bd275a98cbb7.eot?host=www.ionos-status.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0bf83a850b45e4ccda15bd04691e3c47ae84fec3588363b53618bd275a98cbb7.eot?host=www.ionos-status.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-0c394ec7a111aa7928ea470ec0a67c44ebdaa0f93d1c3341abb69656cc26cbdd.woff?host=www.ionos-status.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaRegularIt-9e43859f8015a4d47d9eaf7bafe8d1e26e3298795ce1f4cdb0be0479b8a4605e.ttf?host=www.ionos-status.com') format('truetype');
+    font-weight:400;
+    font-style:italic;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-09566917307251d22021a3f91fc646f3e45f8d095209bcd2cded8a1979f06e54.eot?host=www.ionos-status.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-09566917307251d22021a3f91fc646f3e45f8d095209bcd2cded8a1979f06e54.eot?host=www.ionos-status.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-86724fb2152613d735ba47c3f47a9ad2424b898bea4bece213dacee40344f966.woff?host=www.ionos-status.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaSemibold-cf3e4eb7fbdf6fb83e526cc2a0141e55b01097e6e1abfd4cbdc3eda75d183f74.ttf?host=www.ionos-status.com') format('truetype');
+    font-weight:500;
+    font-style:normal;
+  }
+   
+  @font-face {
+    font-family: 'proxima-nova';
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-622ea489d20e12e691663f83217105e957e2d3d09703707d40155a29c06cc9d9.eot?host=www.ionos-status.com');
+    src: url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-622ea489d20e12e691663f83217105e957e2d3d09703707d40155a29c06cc9d9.eot?host=www.ionos-status.com#iefix') format('embedded-opentype'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-c8dc577ff7f76d2fc199843e38c04bb2e9fd15889421358d966a9f846c2ed1cd.woff?host=www.ionos-status.com') format('woff'),
+         url('https://dka575ofm4ao0.cloudfront.net/assets/ProximaNovaBold-27177fe9242acbe089276ee587feef781446667ffe9b6fdc5b7fe21ad73e12f3.ttf?host=www.ionos-status.com') format('truetype');
+    font-weight:700;
+    font-style:normal;
+  }
+</style>
+
+
+      <link rel="shortcut icon" type="image/x-icon" href="//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/27540/favicon.ico" />
+
+    <link rel="shortcut icon" href='//dka575ofm4ao0.cloudfront.net/pages-favicon_logos/original/27540/favicon.ico'>
+
+    <link rel="alternate" type="application/atom+xml" href="https://www.ionos-status.com/history.atom" title="ionos.com Status History - Atom Feed">
+    <link rel="alternate" type="application/rss+xml" href="https://www.ionos-status.com/history.rss" title="ionos.com Status History - RSS Feed">
+
+      <!-- Canonical Link to ensure that only the custom domain is indexed when present -->
+      <link rel="canonical" href="https://www.ionos-status.com">
+
+    <meta name="_globalsign-domain-verification" content="y_VzfckMy4iePo5oDJNivyYIjh8LffYa4jzUndm_bZ"/>
+
+
+    <link rel="alternate" type="application/atom+xml" title="ATOM" href="https://www.ionos-status.com/history.atom" />
+
+    <!-- Le styles -->
+    <link rel="stylesheet" media="screen" href="https://dka575ofm4ao0.cloudfront.net/packs/0.9dd14fed2e9b7d9d9eb2.css" />
+    <link rel="stylesheet" media="all" href="https://dka575ofm4ao0.cloudfront.net/assets/status/status_manifest-cc9fd99d26ea5cca6f3352190ad1a451683d356cd9a12bb1c7d57870bed73318.css" />
+
+    <script src="https://dka575ofm4ao0.cloudfront.net/assets/jquery-3.5.1.min-729e416557a365062a8a20f0562f18aa171da57298005d392312670c706c68de.js"></script>
+
+    <script>
+      window.pageColorData = {"blue":"#3498DB","border":"#E0E0E0","body_background":"#ffffff","font":"#333333","graph":"#3498db","green":"#2fcc66","light_font":"#AAAAAA","link":"#3498db","orange":"#e67e22","red":"#e74c3c","yellow":"#f1c40f","no_data":"#b3bac5"};
+    </script>
+    <style>
+  /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */ /* BODY BACKGROUND */
+  body,
+  .layout-content.status.status-api .section .example-container .example-opener .color-secondary,
+  .grouped-items-selector,
+  .layout-content.status.status-full-history .history-nav a.current,
+  div[id^="subscribe-modal"] .modal-footer,
+  div[id^="subscribe-modal"],
+  div[id^="updates-dropdown"] .updates-dropdown-section,
+  #uptime-tooltip .tooltip-box {
+    background-color:#ffffff;
+  }
+
+  #uptime-tooltip .pointer-container .pointer-smaller {
+    border-bottom-color:#ffffff;
+  }
+
+
+
+
+  /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */ /* PRIMARY FONT COLOR */
+  body.status,
+  .color-primary,
+  .color-primary:hover,
+  .layout-content.status-index .status-day .update-title.impact-none a,
+  .layout-content.status-index .status-day .update-title.impact-none a:hover,
+  .layout-content.status-index .timeframes-container .timeframe.active,
+  .layout-content.status-full-history .month .incident-container .impact-none,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-none a,
+  .incident-history .impact-none,
+  .layout-content.status .grouped-items-selector.inline .grouped-item.active,
+  .layout-content.status.status-full-history .history-nav a.current,
+  .layout-content.status.status-full-history .history-nav a:not(.current):hover,
+  div[id^="subscribe-modal"] .modal-header .close,
+  .grouped-item-label,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events .related-event a.related-event-link {
+    color:#333333;
+  }
+
+  .layout-content.status.status-index .components-statuses .component-container .name {
+    color:#333333;
+    color:rgba(51,51,51,.8);
+  }
+
+
+
+
+  /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */ /* SECONDARY FONT COLOR */
+  small,
+  .layout-content.status .table-row .date,
+  .color-secondary,
+  .layout-content.status .grouped-items-selector.inline .grouped-item,
+  .layout-content.status.status-full-history .history-footer .pagination a.disabled,
+  .layout-content.status.status-full-history .history-nav a,
+  #uptime-tooltip .tooltip-box .tooltip-content .related-events #related-event-header {
+    color:#AAAAAA;
+  }
+
+
+
+
+  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */  /* BORDER COLOR */
+  body.status .layout-content.status .border-color,
+  hr,
+  .tooltip-base,
+  .markdown-display table,
+  div[id^="subscribe-modal"],
+  #uptime-tooltip .tooltip-box {
+    border-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-footer,
+  .markdown-display table td {
+    border-top-color:#E0E0E0;
+  }
+
+  .markdown-display table td + td, .markdown-display table th + th {
+    border-left-color:#E0E0E0;
+  }
+
+  div[id^="subscribe-modal"] .modal-header,
+  #uptime-tooltip .pointer-container .pointer-larger {
+    border-bottom-color:#E0E0E0;
+  }
+
+  #uptime-tooltip .tooltip-box .outage-field {
+    /*
+      Generate the background-color for the outage-field from the css_body_background_color and css_border_color.
+
+      For the default background (#ffffff) and default css_border_color (#e0e0e0), use the luminosity of the default background with a magic number to arrive at
+      the original outage-field background color (#f4f5f7). I used the formula Target Color = Color * alpha + Background * (1 - alpha) to find the magic number of ~0.08.
+
+      For darker css_body_background_color, luminosity values are lower so alpha trends toward becoming transparent (thus outage-field background becomes same as css_body_background_color).
+    */
+    background-color: rgba(224,224,224,0.31);
+
+    /*
+      outage-field border-color alpha is inverse to the luminosity of css_body_background_color.
+      That is to say, with a default white background this border is transparent, but on a black background, it's opaque css_border_color.
+    */
+    border-color: rgba(224,224,224,0.0);
+  }
+
+
+
+
+  /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */ /* CSS REDS */
+  .layout-content.status.status-index .status-day .update-title.impact-critical a,
+  .layout-content.status.status-index .status-day .update-title.impact-critical a:hover,
+  .layout-content.status.status-index .page-status.status-critical,
+  .layout-content.status.status-index .unresolved-incident.impact-critical .incident-title,
+  .flat-button.background-red {
+    background-color:#e74c3c;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-red:after,
+  .layout-content.status-full-history .month .incident-container .impact-critical,
+  .layout-content.status-incident .incident-name.impact-critical,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-critical a,
+  .status-red .icon-indicator,
+  .incident-history .impact-critical,
+  .components-container .component-inner-container.status-red .component-status,
+  .components-container .component-inner-container.status-red .icon-indicator {
+    color:#e74c3c;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-critical .updates {
+    border-color:#e74c3c;
+  }
+
+
+
+
+  /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */ /* CSS ORANGES */
+  .layout-content.status.status-index .status-day .update-title.impact-major a,
+  .layout-content.status.status-index .status-day .update-title.impact-major a:hover,
+  .layout-content.status.status-index .page-status.status-major,
+  .layout-content.status.status-index .unresolved-incident.impact-major .incident-title {
+    background-color:#e67e22;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-orange:after,
+  .layout-content.status-full-history .month .incident-container .impact-major,
+  .layout-content.status-incident .incident-name.impact-major,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-major a,
+  .status-orange .icon-indicator,
+  .incident-history .impact-major,
+  .components-container .component-inner-container.status-orange .component-status,
+  .components-container .component-inner-container.status-orange .icon-indicator {
+    color:#e67e22;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-major .updates {
+    border-color:#e67e22;
+  }
+
+
+
+
+  /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */ /* CSS YELLOWS */
+  .layout-content.status.status-index .status-day .update-title.impact-minor a,
+  .layout-content.status.status-index .status-day .update-title.impact-minor a:hover,
+  .layout-content.status.status-index .page-status.status-minor,
+  .layout-content.status.status-index .unresolved-incident.impact-minor .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#f1c40f;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-yellow:after,
+  .layout-content.status-full-history .month .incident-container .impact-minor,
+  .layout-content.status-incident .incident-name.impact-minor,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-minor a,
+  .status-yellow .icon-indicator,
+  .incident-history .impact-minor,
+  .components-container .component-inner-container.status-yellow .component-status,
+  .components-container .component-inner-container.status-yellow .icon-indicator,
+  .layout-content.status.manage-subscriptions .confirmation-infobox .fa {
+    color:#f1c40f;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-minor .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#f1c40f;
+  }
+
+
+
+
+  /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */ /* CSS BLUES */
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a,
+  .layout-content.status.status-index .status-day .update-title.impact-maintenance a:hover,
+  .layout-content.status.status-index .page-status.status-maintenance,
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .incident-title,
+  .layout-content.status.status-index .scheduled-incidents-container .tab {
+    background-color:#3498DB;
+  }
+
+  .layout-content.status-index .components-statuses .component-container.status-blue:after,
+  .layout-content.status-full-history .month .incident-container .impact-maintenance,
+  .layout-content.status-incident .incident-name.impact-maintenance,
+  .layout-content.status.status-index .incidents-list .incident-title.impact-maintenance a,
+  .status-blue .icon-indicator,
+  .incident-history .impact-maintenance,
+  .components-container .component-inner-container.status-blue .component-status,
+  .components-container .component-inner-container.status-blue .icon-indicator {
+    color:#3498DB;
+  }
+
+  .layout-content.status.status-index .unresolved-incident.impact-maintenance .updates,
+  .layout-content.status.status-index .scheduled-incidents-container {
+    border-color:#3498DB;
+  }
+
+
+
+
+  /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */ /* CSS GREENS */
+  .layout-content.status.status-index .page-status.status-none {
+    background-color:#2fcc66;
+  }
+  .layout-content.status-index .components-statuses .component-container.status-green:after,
+  .status-green .icon-indicator,
+  .components-container .component-inner-container.status-green .component-status,
+  .components-container .component-inner-container.status-green .icon-indicator {
+    color:#2fcc66;
+  }
+
+
+
+
+  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */  /* CSS LINK COLOR */
+  a,
+  a:hover,
+  .layout-content.status-index .page-footer span a:hover,
+  .layout-content.status-index .timeframes-container .timeframe:not(.active):hover,
+  .layout-content.status-incident .subheader a:hover {
+    color:#3498db;
+  }
+
+  .flat-button,
+  .masthead .updates-dropdown-container .show-updates-dropdown,
+  .layout-content.status-full-history .show-filter.open  {
+    background-color:#3498db;
+  }
+
+
+
+
+  /* CUSTOM COLOR OVERRIDES FOR UPTIME SHOWCASE */
+  .components-section .components-uptime-link {
+    color: #aaaaaa;
+  }
+
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item {
+    color: #aaaaaa;
+    opacity: 0.8;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .legend-item.light {
+    color: #aaaaaa;
+    opacity: 0.5;
+  }
+  .layout-content.status .shared-partial.uptime-90-days-wrapper .legend .spacer {
+    background: #aaaaaa;
+    opacity: 0.3;
+  }
+</style>
+
+
+    <!-- custom css -->
+        <link rel="stylesheet" type="text/css" href="//dka575ofm4ao0.cloudfront.net/page_display_customizations-custom_css_externals/27490/external20221213-35-64f5cs.css">
+
+
+    <!-- Le HTML5 shim -->
+    <!--[if lt IE 9]>
+      <script src="//html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- injection for static -->
+
+
+    
+  </head>
+
+
+  <body class="status index status-none">
+
+    
+
+
+  <div class="layout-content status status-index premium">
+      <div class="custom-header-container">
+    <div class="oao-navi-navigation">
+  <div class="oao-navi-left">
+    <div class="oao-navi-application-name">
+      <a class="oao-navi-app-name" href="https://www.ionos.com">
+        <span>Status</span>
+      </a>
+    </div>
+  </div>
+  <div class="oao-navi-right">
+    <a href="https://my.ionos.com/" class="oao-navi-button" target="_blank">Login</a>
+    <a href="https://contact.ionos.com/" class="oao-navi-help-button" target="_blank"></a>
+  </div>
+</div>
+
+<header class="page-header page-header--overlapping page-header--narrow">
+  <div class="page-header__block">
+    <h1 class="page-header__headline">IONOS Status Page</h1>
+    <h2 class="page-header__headline page-header__headline--sub"></h2>
+    <div id="replace-with-subscribe"></div>
+  </div>
+</header>
+      
+  <div class="updates-dropdown-container" data-js-hook="updates-dropdown-container">
+    <a href="#" data-js-hook="show-updates-dropdown" id="show-updates-dropdown" class="show-updates-dropdown" aria-label="Subscribe to updates" aria-expanded="false" aria-haspopup="dialog" role="button">
+
+    </a>
+
+<!--    Accessibility guidelines for tabs: https://www.w3.org/TR/wai-aria-practices-1.1/examples/tabs/tabs-1/tabs.html -->
+    <div class="updates-dropdown" data-js-hook="updates-dropdown" id="updates-dropdown" style="display:none">
+      <div class="updates-dropdown-nav nav-items-5" role="tablist" aria-label="Subscribe to updates">
+          <a href="#updates-dropdown-email" aria-controls="updates-dropdown-email" aria-label="Subscribe via email" role="tab" aria-selected="true" id="updates-dropdown-email-btn">
+            <span class="icon-container email">
+          </a>
+          <a href="#updates-dropdown-webhook" aria-controls="updates-dropdown-webhook" aria-label="Subscribe via webhook" role="tab" id="updates-dropdown-webhook-btn">
+            <span class="icon-container webhook">
+          </a>
+          <a href="#updates-dropdown-support" aria-controls="updates-dropdown-support" aria-label="Contact support" role="tab" id="updates-dropdown-support-btn">
+            <span class="icon-container support">
+          </a>
+          <a href="#updates-dropdown-atom" aria-controls="updates-dropdown-atom" aria-label="Subscribe via RSS" role="tab" id="updates-dropdown-atom-btn">
+            <span class="icon-container rss">
+          </a>
+        <button data-js-hook="updates-dropdown-close" aria-controls="updates-dropdown-close" aria-label="Close subscribe form" id="updates-dropdown-close-btn">
+          x
+        </button>
+      </div>
+      <div class="updates-dropdown-sections-container">
+          <div class="updates-dropdown-section email" id="updates-dropdown-email" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-email-btn">
+            <div class="directions">
+              Get email notifications whenever ionos.com <strong>creates</strong>,  <strong>updates</strong> or <strong>resolves</strong> an incident.
+            </div>
+            <form id="subscribe-form-email" action="/subscriptions/new-email" accept-charset="UTF-8" data-remote="true" method="post">
+              <input type="hidden" name="email_otp_verify_flow" id="email_otp_verify_flow" value="false" autocomplete="off" />
+                <!-- make sure not to put cookie values in here since this gets cached -->
+                <label for="email">Email address:</label>
+                <input name="email" id="email" type="text" class="full-width" data-js-hook="email-notification-field" autocomplete="email">
+                <input name="email_otp_auth_token" type='hidden' id="email-otp-token-field">
+                <div class="opt-container-section" id="email-otp-container", style="display:none" >
+                  <label for="email-otp">Enter OTP:</label>
+                  <input name="otp" id="email-otp" type="text" value="" class="prepend full-width">
+                  <p id="email-otp-timer">Resend OTP in: <span id="email-otp-countdown"></span> seconds </p>
+                  <p id="resend-email-otp">
+                    Didn't receive the OTP?
+                    <a href="#" id="resend-email-otp-btn" >Resend OTP </a>
+                  </p>
+                </div>
+                  <input type="submit" value="Subscribe via Email" class="flat-button full-width" id="subscribe-btn-email" data-disabled-text="Subscribing..." data-js-hook="updates-dropdown-close" >
+                  <div class="privacy_policy_information small">By subscribing you agree to our <a target="_blank" rel="noopener" href="https://www.ionos.com/terms-gtc/terms-privacy">Privacy Policy</a>.</div>
+</form>          </div>
+
+
+
+
+          <div class="updates-dropdown-section webhook" id="updates-dropdown-webhook" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-webhook-btn">
+            <div class="directions">
+              Get webhook notifications whenever ionos.com <strong>creates</strong> an incident, <strong>updates</strong> an incident, <strong>resolves</strong> an incident or <strong>changes</strong> a component status.
+            </div>
+            <form id="subscribe-form-webhook" action="/subscriptions/webhook.json" accept-charset="UTF-8" data-remote="true" method="post">
+              <div class="control-group">
+                <div class="controls">
+                  <label for="endpoint-webhooks">Webhook URL:</label>
+                  <input type="text" name="endpoint" id="endpoint-webhooks" data-js-hook="endpoint" class="full-width" aria-describedby="url-help-block" />
+                  <p class="help-block" id="url-help-block">The URL we should send the webhooks to</p>
+                </div>
+              </div>
+
+              <div class="control-group">
+                <div class="controls">
+                  <label for="email-webhooks">Email address:</label>
+                  <input type="text" name="email" id="email-webhooks" data-js-hook="email" class="full-width" aria-describedby="email-help-block" />
+                  <p class="help-block" id="email-help-block">We'll send you email if your endpoint fails</p>
+                </div>
+              </div>
+
+                <input type="submit" value=Subscribe To Notifications class="flat-button full-width" id="subscribe-btn-webhook" data-disabled-text="Subscribing..." data-js-hook="updates-dropdown-close">
+                <div class="privacy_policy_information small">By subscribing you agree to our <a target="_blank" rel="noopener" href="https://www.ionos.com/terms-gtc/terms-privacy">Privacy Policy</a>.</div>
+
+</form>          </div>
+
+
+          <div class="updates-dropdown-section support" id="updates-dropdown-support" style="display:none" role="tabpanel" aria-labelledby="updates-dropdown-support-btn">
+            Visit our <a target="_blank" href="https://www.ionos.com/help">support site</a>.
+          </div>
+
+          <div class="updates-dropdown-section atom" id="updates-dropdown-atom" role="tabpanel" aria-labelledby="updates-dropdown-atom-btn">
+            Get the <a href="https://www.ionos-status.com/history.atom" target="_blank">Atom Feed</a> or <a href="https://www.ionos-status.com/history.rss" target="_blank">RSS Feed</a>.
+          </div>
+      </div>
+    </div>
+  </div>
+
+<script>
+  $(function () {
+    const phoneNumberInput = $('#phone-number');
+    const errorDiv = $('#sms-atl-error')
+    if(errorDiv.length){
+      function checkSelectedCountry() {
+        const selectedCountry = $('#phone-country').val();
+        const isOtpEnabled = $('#phone-number-country-code').attr('data-otp-enabled') === 'true';
+        const form = document.getElementById('subscribe-form-sms');
+        form.action = '/subscriptions/new-sms';
+        const isOtpFlow = document.getElementById('otp_verify_flow');
+        document.getElementById('otp-container').style.display = "none";
+        if(false && selectedCountry === 'sg') { // Replace 'SG' with the actual value representing Singapore in your select tag
+          phoneNumberInput.prop('disabled', true);
+          errorDiv.html(`Due to new Singapore government regulations, we're currently not supporting text subscriptions in Singapore.<a href="https://community.atlassian.com/t5/Statuspage-articles/Attention-SMS-notifications-will-be-disabled-on-August-1st-2023/ba-p/2424398" target="_blank"> Learn more.</a> <br> Select another method to subscribe.`);
+        } else {
+          phoneNumberInput.prop('readonly', false);
+          errorDiv.html('');
+          if(true){
+            if(isOtpEnabled){
+              document.getElementById('subscribe-btn-sms').value = "Send OTP";
+            }
+            else {
+              isOtpFlow.value = false;
+              document.getElementById('subscribe-btn-sms').value = "Subscribe via Text Message";
+            }
+          }
+        }
+      }
+
+      $('#phone-country').on('change', checkSelectedCountry);
+      checkSelectedCountry();
+    }
+  });
+
+  document.addEventListener('DOMContentLoaded', function() {
+    const dropdown = document.querySelector('#phone-number-country-code .phone-country');
+    if (dropdown){
+      const wrapperDiv = document.getElementById('phone-number-country-code');
+      const selectedOption = dropdown.options[dropdown.selectedIndex];
+      const otpEnabled = selectedOption.getAttribute('data-otp-enabled');
+
+      wrapperDiv.setAttribute('data-otp-enabled', otpEnabled);
+
+      dropdown.addEventListener('change', function() {
+        const selectedOption = dropdown.options[dropdown.selectedIndex];
+        const otpEnabled = selectedOption.getAttribute('data-otp-enabled');
+
+        wrapperDiv.setAttribute('data-otp-enabled', otpEnabled);
+      });
+    }
+  });
+
+  var countdownTimer;
+  var resendBtn = document.getElementById('resend');
+  var timer = document.getElementById('timer');
+  var form = document.getElementById('subscribe-form-sms');
+  var RESEND_TIMER = 30;
+  $(function() {
+    $('#subscribe-form-sms').on('ajax:success', function(e, data, status, xhr){
+      const form = this;
+      const action = form.getAttribute('action');
+      if (data.type === 'success' && data.otp_flow === true) {
+        document.getElementById('subscriber_code').value = data.subscriber_code
+        document.getElementById('otp-container').style.display = "block";
+        $('#phone-number').prop('readonly', true);
+        var display = document.getElementById('countdown');
+        disableResend();
+        startTimer(RESEND_TIMER, display)
+        document.getElementById('subscribe-btn-sms').value = "Verify OTP and Subscribe";
+        document.getElementById('otp_verify_flow').value = true;
+        form.action = '/subscriptions/verify-otp';
+      } else if (data.type === 'success' && action.includes('verify')){
+        document.getElementById('otp-container').style.display = "none";
+        $('#phone-number').val('').prop('readonly', false);
+        $('#otp').val('');
+        document.getElementById('subscribe-btn-sms').value = "Send OTP";
+        document.getElementById('otp_verify_flow').value = false;
+        form.action = '/subscriptions/new-sms';
+        SP.currentPage.updatesDropdown.hide();
+      }
+    });
+    $("#btn-subcriber-change-number").on('click', () => {
+      document.getElementById('otp-container').style.display = "none";
+      $('#phone-number').prop('readonly', false);
+      document.getElementById('subscribe-btn-sms').value = "Send OTP";
+      form.action = '/subscriptions/new-sms';
+      return false
+    })
+    $('#resend-otp-btn').on('click', function(e) {
+      e.preventDefault();
+      let phoneNumber = $('#phone-number').val();
+      let countryCode = $('.phone-country').val();
+      $.ajax({
+        type: 'POST',
+        url: "/subscriptions/new-sms",
+        data: {
+          phone_number: phoneNumber,
+          phone_country: countryCode,
+          type: 'resend'
+        },
+      }).done(function(data) {
+        var messageOptions = (data.type !== undefined && data.type !== null) ? { cssClass: data.type } : {};
+        HRB.utils.notify(data.text, messageOptions);
+        var display = document.getElementById('countdown');
+        disableResend();
+        timer.style.display = "none"
+        if (data.type === 'success') {
+          startTimer(RESEND_TIMER, display);
+        }
+      })
+    });
+  })
+
+  function startTimer(duration, display){
+    var timer = duration, seconds;
+    clearInterval(countdownTimer);
+    countdownTimer = setInterval(function () {
+      seconds = parseInt(timer % 60, 10);
+      display.textContent = seconds;
+      if(--timer < 0){
+        enableResend();
+        clearInterval(countdownTimer);
+      }
+    }, 1000);
+    disableResend();
+  }
+  function enableResend(){
+    resendBtn.style.display = "block";
+    timer.style.display = "none"
+  }
+  function disableResend(){
+    resendBtn.style.display = "none";
+    timer.style.display = "block"
+  }
+
+  $(function() {
+    $('#subscribe-form-email').on('submit', function() {
+      var tokenField = document.getElementById('email-otp-token-field');
+      let page_code = "l4wxddfpxjw0"
+      let key = keyForEmailOtpToken($('#email').val(), page_code);
+      tokenField.value = localStorage.getItem(key);
+    });
+  });
+
+  var emailOtpCountdownTimer;
+  var emailOtpResendBtn = document.getElementById('resend-email-otp');
+  var emailOtpTimer = document.getElementById('email-otp-timer');
+  var emailOtpForm = document.getElementById('subscribe-form-email');
+  var EMAIL_OTP_RESEND_TIMER = 120;
+  $(function() {
+    $('#subscribe-form-email').on('ajax:success', function(e, data, status, xhr){
+      const form = this;
+      const action = form.getAttribute('action');
+      if (data.type === 'success' && data.email_otp_verify_flow === true) {
+        document.getElementById('email-otp-container').style.display = "block";
+        var display = document.getElementById('email-otp-countdown');
+        display.textContent = EMAIL_OTP_RESEND_TIMER;
+        disableEmailOtpResend();
+        startEmailOtpTimer(EMAIL_OTP_RESEND_TIMER, display)
+        document.getElementById('subscribe-btn-email').value = "Verify OTP and Subscribe";
+        document.getElementById('email_otp_verify_flow').value = true;
+        form.action = '/subscriptions/verify-email-otp';
+      } else if (data.type === 'success' && action.includes('verify')){
+        let email =  $('#email')
+        let page_code = "l4wxddfpxjw0"
+        let key = keyForEmailOtpToken(email.val(), page_code);
+        localStorage.setItem(key, data.email_otp_auth_token);
+
+        document.getElementById('email-otp-container').style.display = "none";
+        email.val('').prop('readonly', false);
+        $('#email-otp').val('');
+        document.getElementById('subscribe-btn-email').value = "Send OTP";
+        document.getElementById('otp_verify_flow').value = false;
+        form.action = '/subscriptions/new-email';
+        SP.currentPage.updatesDropdown.hide();
+      }
+    });
+    $('#resend-email-otp-btn').on('click', function(e) {
+      e.preventDefault();
+      let email = $('#email').val();
+      $.ajax({
+        type: 'POST',
+        url: "/subscriptions/new-email",
+        data: {
+          email: email
+        },
+      }).done(function(data) {
+        var messageOptions = (data.type !== undefined && data.type !== null) ? { cssClass: data.type } : {};
+        HRB.utils.notify(data.text, messageOptions);
+        if (data.type === 'success') {
+          var display = document.getElementById('email-otp-countdown');
+          display.textContent = EMAIL_OTP_RESEND_TIMER;
+          disableEmailOtpResend();
+          emailOtpTimer.style.display = "none"
+          startEmailOtpTimer(EMAIL_OTP_RESEND_TIMER, display);
+        }
+      })
+    });
+  })
+
+  function startEmailOtpTimer(duration, display){
+    var timer = duration, seconds;
+    clearInterval(emailOtpCountdownTimer);
+    emailOtpCountdownTimer = setInterval(function () {
+      seconds = parseInt(timer, 10);
+      display.textContent = seconds;
+      if(--timer < 0){
+        enableEmailOtpResend();
+        clearInterval(emailOtpCountdownTimer);
+      }
+    }, 1000);
+    disableEmailOtpResend();
+  }
+
+  function enableEmailOtpResend(){
+    emailOtpResendBtn.style.display = "block";
+    emailOtpTimer.style.display = "none"
+  }
+  function disableEmailOtpResend(){
+    emailOtpResendBtn.style.display = "none";
+    emailOtpTimer.style.display = "block"
+  }
+  function keyForEmailOtpToken(email, pageCode) {
+    return email + '|' + pageCode+ '|SUBSCRIBE_VIA_EMAIL';
+  }
+</script>
+
+  </div>
+
+    <div class="container">
+        <div class="page-status status-none">
+          <span class="status font-large">
+            All Systems Operational
+          </span>
+          <span class="last-updated-stamp  font-small"></span>
+        </div>
+
+
+
+        <div class="components-section font-regular">
+    <div class="components-container one-column">
+          <div class="component-container border-color">
+            
+<div data-component-id="65nn5ypswvtr"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Control Panel
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+          </div>
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="gj8kztjr2f6l"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Email" tabindex="0"></span>
+       <span>
+         Email
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="6j5vtyqvkqfg"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Webmail
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="93qj8b064ds4"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Microsoft Exchange
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="wgc5tbqyr0ds"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Email Archiving
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="q9wry2m7n1t1"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Office" tabindex="0"></span>
+       <span>
+         Office
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="xw615pgs9wdx"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Microsoft 365
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="90p9xbp31ywd"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      HiDrive
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="j6hm6y54dj47"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      G Suite
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="28ml7dm2f79m"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      OX App Suite
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="fzsfrzqzlpd9"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Managed Nextcloud
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="lkp07n6331wy"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Mail System and Delivery" tabindex="0"></span>
+       <span>
+         Mail System and Delivery
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="3hj577xjqf5t"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Sending Emails
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="36ztjxrpm06v"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Receiving Emails
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="9pvykwkpsw3y"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Domains" tabindex="0"></span>
+       <span>
+         Domains
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="jjkr2vlp66c7"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      DNS
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="t21l6n1m0ttr"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Registry Interface
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="www8h3s56yrd"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      SSL
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="3qn27jjqg65r"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Website Builder and Hosting" tabindex="0"></span>
+       <span>
+         Website Builder and Hosting
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="gjlvftbkl39w"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      MyWebsite (ordered after 09/06/2017)
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="9dypnyz2k946"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Web Hosting
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="vq5lzk8h4d6d"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Managed Cloud Hosting
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="r17n7djt1qgd"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      MyWebsite (ordered before 09/06/2017)
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="lfjk2gjxcwtx"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      MyWebsite NOW
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="jthls41b183v"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Wordpress Pro
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="qscv24dx7jtr"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Website Builder
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="r03pwdmc4c62"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Servers" tabindex="0"></span>
+       <span>
+         Servers
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="qn7x4s39tyhb"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Dedicated Server
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="98nxl0yf5p6p"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Cloud Server
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="73x79vlx0yqf"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Virtual Server
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="cmwst3ynlt14"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      VPS
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="tk5lpz75bmcq"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Online Marketing" tabindex="0"></span>
+       <span>
+         Online Marketing
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="94hv92nwzkz0"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      ListLocal
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="svflzb2zvjs5"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      RankingCoach
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="495lyk31ryk8"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      E-Mail Marketing
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="ghss7kqhkhxr"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      SEM Service
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="ymjdtnl1vrhh"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      SiteAnalytics
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="yhvct3b661b9"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle eCommerce" tabindex="0"></span>
+       <span>
+         eCommerce
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="wl1lq7zj95td"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Online Store
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="rblfqrmlf1hj"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Contract Management" tabindex="0"></span>
+       <span>
+         Contract Management
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="0t9ffh87cn35"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Contract Activation
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="qygdp3pqw7nr"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Order Page
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="54v077t2q9bj"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Cancellation Service
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="kmj9ls3yyb6v"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Billing Service
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color is-group ">
+  
+<div data-component-id="pvnzlxb0jz96"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="component-group-opener">
+
+   <span class="name">
+       <span class="fa group-parent-indicator color-secondary font-small fa-plus-square-o" role="button" aria-expanded="false" aria-label="Toggle Customer Service" tabindex="0"></span>
+       <span>
+         Customer Service
+       </span>
+   </span>
+
+
+  <span
+    class="component-status tool"
+    title="Groups take on the status of their most degraded child component or service. Click to see the status of the individual children."
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+
+  <!-- children components -->
+  <div class="child-components-container ">
+      
+<div data-component-id="tdjsbqlp78th"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Customer Hotline
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+      
+<div data-component-id="5x6gf32fjczf"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Support Tool
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+  </div>
+</div>
+
+          <div class="component-container border-color">
+            
+<div data-component-id="x24gh136yb8y"
+     class="component-inner-container status-green "
+     data-component-status="operational"
+     data-js-hook="">
+
+   <span class="name">
+      Partner Portal
+   </span>
+
+
+  <span
+    class="component-status "
+    title=""
+  >
+
+    Operational
+
+  </span>
+
+  <span class="tool icon-indicator fa fa-check" title="Operational"></span>
+
+</div>
+
+          </div>
+    </div>
+    <div class="component-statuses-legend font-small">
+  <div class="legend-item status-green">
+    <span class="icon-indicator fa fa-check"></span>
+    Operational
+  </div>
+  <div class="legend-item status-yellow">
+    <span class="icon-indicator fa fa-minus-square"></span>
+    Degraded Performance
+  </div>
+  <div class="legend-item status-orange">
+    <span class="icon-indicator fa fa-exclamation-triangle"></span>
+    Partial Outage
+  </div>
+  <div class="breaker"></div>
+  <div class="legend-item status-red">
+    <span class="icon-indicator fa fa-times"></span>
+    Major Outage
+  </div>
+  <div class="legend-item status-blue">
+    <span class="icon-indicator fa fa-wrench"></span>
+    Maintenance
+  </div>
+</div>
+
+  </div>
+
+
+
+
+
+
+      <div class="incidents-list format-expanded">
+        <a class="font-largest no-link" id="past-incidents" href="#past-incidents">Past Incidents</a>
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">29</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported today.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">28</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">27</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">26</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">25</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Jan <var data-var="date">24</var>, <var data-var="year">2024</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/fsdkyfsbvdyj">Limited functionality of Support Tools</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The issue has been resolved.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>12:44</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Due to a technical issue with our Support Tools, our Customer Service might not be able to answer all questions related to your account.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>12:31</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/qpy4q9b6ts1l">Disruption in several Control Panel areas</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The issue has been resolved.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>10:41</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Access to Websites & Shops in the Control Panel may be temporarily restricted.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>08:36</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+          <div class="incident-container">
+  <div class="incident-title impact-major font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/trsyhq3sybpk">Sending and receiving e-mails is currently not possible</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The systems are stable and all services are functioning normally again. Our apologies for the inconvenience caused.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>09:48</var> EST
+        </small>
+      </div>
+      <div class="update font-regular update">
+        <strong>Update</strong> -
+      	<span class="whitespace-pre-wrap">We have eliminated the disruption for some of those affected.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>09:39</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Some customers may be experiencing issues when sending and receiving e-mails.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>24</var>, <var data-var='time'>09:28</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">23</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Jan <var data-var="date">22</var>, <var data-var="year">2024</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-major font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/p9jrzmfqrbdl">Limited functionality of product MyWebsite</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The systems are stable and all services are functioning normally again.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>22</var>, <var data-var='time'>12:11</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Some customers may face issues while using their MyWebsite product. At this time, it may not be possible to use the website editor.<br />The online websites that have already been created will not be affected. We apologize for any inconvenience this may cause.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>22</var>, <var data-var='time'>11:55</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/z88mdwffpjpj">Technical issues in our email systems</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The issue has been resolved.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>22</var>, <var data-var='time'>03:51</var> EST
+        </small>
+      </div>
+      <div class="update font-regular update">
+        <strong>Update</strong> -
+      	<span class="whitespace-pre-wrap">We are still working on resolving the technical issue.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>21</var>, <var data-var='time'>19:15</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Some customers may be experiencing issues creating email address</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>21</var>, <var data-var='time'>16:18</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Jan <var data-var="date">21</var>, <var data-var="year">2024</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-maintenance font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/9ljklhk6pxbg">Maintenance on Database Systems</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular completed">
+        <strong>Completed</strong> -
+      	<span class="whitespace-pre-wrap">The scheduled maintenance has been completed.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>21</var>, <var data-var='time'>21:00</var> EST
+        </small>
+      </div>
+      <div class="update font-regular in progress">
+        <strong>In progress</strong> -
+      	<span class="whitespace-pre-wrap">Scheduled maintenance is currently in progress. We will provide updates as necessary.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>21</var>, <var data-var='time'>16:30</var> EST
+        </small>
+      </div>
+      <div class="update font-regular scheduled">
+        <strong>Scheduled</strong> -
+      	<span class="whitespace-pre-wrap">Please be aware that we will be performing maintenance on our database systems.<br /><br />The following services and functions may be unavailable:<br /><br />- Purchased products maybe delayed during setup<br />- Updating customer data in the Control Panel and communication email for some Control Panel actions may not be sent out<br />- Some customers may be unable to view their invoice in the Control Panel<br /><br />Additionally, our Customer Service Team may not be able to answer all questions related to your account.<br /><br />All systems will be available to you as usual when the maintenance is completed, however temporary downtime is possible.<br /><br />We apologize for any inconvenience this may cause.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>19</var>, <var data-var='time'>05:06</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">20</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">19</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">18</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular ">
+    <div class="date border-color font-large">Jan <var data-var="date">17</var>, <var data-var="year">2024</var></div>
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/kjf7kftx836z">Limited functionality of product Click &amp; Build</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The issue has been resolved.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>17</var>, <var data-var='time'>14:26</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Access to certain areas of the Click & Build section in the Control Panel may be temporarily restricted.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>17</var>, <var data-var='time'>13:57</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+          <div class="incident-container">
+  <div class="incident-title impact-minor font-large">
+    <a class="whitespace-pre-wrap" href="/incidents/mj4ymqwkqv0n">Access to Websites &amp; Shops may not be possible</a>
+  </div>
+
+  <div class="updates-container">
+    <!-- postmortem -->
+
+    <!-- incident updates -->
+      <div class="update font-regular resolved">
+        <strong>Resolved</strong> -
+      	<span class="whitespace-pre-wrap">The issue has been resolved.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>17</var>, <var data-var='time'>09:33</var> EST
+        </small>
+      </div>
+      <div class="update font-regular identified">
+        <strong>Identified</strong> -
+      	<span class="whitespace-pre-wrap">Access to Websites & Shops in the Control Panel may be temporarily restricted.</span>
+
+        <br>
+
+        <small>
+            Jan <var data-var='date'>17</var>, <var data-var='time'>09:15</var> EST
+        </small>
+      </div>
+  </div>
+
+</div>
+
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">16</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+          
+  <div class="status-day font-regular no-incidents">
+    <div class="date border-color font-large">Jan <var data-var="date">15</var>, <var data-var="year">2024</var></div>
+        <p class="color-secondary">No incidents reported.</p>
+  </div>
+
+      </div>
+
+
+      <div class="page-footer border-color font-small">
+          <a href="/history" class="history-footer-link"><span style="font-family:arial">&larr;</span> Incident History</a>
+
+        <span class="color-secondary powered-by"><a class="color-secondary" target="_blank" rel="noopener noreferrer nofollow" href="https://www.atlassian.com/software/statuspage?utm_campaign=www.ionos-status.com&amp;utm_content=SP-notifications&amp;utm_medium=powered-by&amp;utm_source=inapp">Powered by Atlassian Statuspage</a></span>
+      </div>
+    </div>
+
+      <div class="custom-footer-container">
+    <div class="footer">
+  <div class="footer__block">
+    <div class="footer__section">
+      <div class="footer__section-item"></div>
+      <div class="footer__section-item">IONOS Inc. • <span class="footer__year">2020</span></div>
+      <div class="footer__section-item"><a href="https://www.ionos.com/terms-gtc/terms-privacy/" class="link">Privacy policy</a></div>
+    </div>
+  </div>
+</div>
+<script type="text/javascript">
+  !function(){var e=document.querySelector(".footer__block .footer__section-item:first-of-type")||!1,o=document.querySelector(".page-footer > a")||!1,t=document.querySelector(".page-footer")||!1;e&&o&&t&&(e.insertBefore(o,e.firstChild),t.parentNode.removeChild(t));var r=document.querySelector("span.footer__year")||!1;!1!==r&&(r.textContent=(new Date).getFullYear());var n=window.navigator||{};if(n.uA=n.userAgent||"",n.uA.includes("com.oneandone.mobile.ControlPanel")){var a=document.body||!1;if(!1===a)return;a.classList.add("oao-navi-mobile-app")}}();
+</script>
+<script type="text/javascript">
+ !function(){function t(){var n=["impact-critical","impact-major","impact-minor"];!function(t,e){for(var r=document.querySelectorAll(t),i=0;i<r.length;i++)e(r[i],i)}(".incident-container",function(t,e){for(var r=0;r<n.length;r+=1){!1!==(t.querySelector("."+n[r])||!1)&&t.classList.add(n[r])}if(!1===(t.querySelector(".show-history")||!1)){var i=t.querySelector("a[href]")||!1;if(i&&i.getAttribute("href")){var o=document.createElement("a");o.classList.add("show-history"),o.textContent="Show history",o.setAttribute("href",i.getAttribute("href")),t.appendChild(o)}}})}t(),window.setTimeout(t,500)}();
+</script>
+<script type="text/javascript">
+  !function(){var e=document.body||!1;if(!1!==e&&e.classList.contains("history")){var t=document.querySelector(".container > h4")||!1,n=document.querySelector("h1.page-header__headline")||!1;if(!1!==t&&!1!==n){var o=t.textContent;0<o.length&&(n.textContent=o)}}}();
+</script>
+<script type="text/javascript">
+  !function(){var e=document.body||!1;if(!1!==e&&e.classList.contains("incident")){var t=document.querySelector(".page-title .incident-name")||!1,n=document.querySelector("h1.page-header__headline")||!1,o=t.textContent;t&&n&&0<o.length&&(n.textContent=o);var r=document.querySelector(".page-title .subheader")||!1,c=document.querySelector("h1.page-header__headline")||!1;r&&c&&r.classList.contains("scheduled-for")&&(c.textContent=r.textContent);var d=document.querySelector(".flat-button.subscribe-button")||!1,a=document.querySelector(".updates-dropdown-container")||!1,u=document.querySelector(".page-header__block")||!1;d&&a&&u&&(a.parentNode.removeChild(a),u.appendChild(d))}}();
+</script>
+<script type="text/javascript">
+  !function(){var t=document.querySelector(".page-status")||!1,e=t.querySelector(".status")||!1,s=document.querySelector(".components-container")||!1;if(!1!==t&&!1!==e&&!1!==s){t.classList.remove("page-status");var a=document.createElement("h2");a.classList.add("status"),a.classList.add.apply(a.classList,t.classList),a.textContent=e.textContent,t.parentNode.removeChild(t),s.insertBefore(a,s.firstChild)}}();
+</script>
+<script type="text/javascript">
+  !function(){var e=document.body||!1;if(!1!==e&&e.classList.contains("manage")){var t=document.querySelector(".container > h3:first-child small")||!1,n=document.querySelector("h1.page-header__headline")||!1;t&&n&&(n.textContent=t.textContent);var o=document.querySelector(".container > h3:first-child")||!1;o&&o.parentNode.removeChild(o)}}();
+</script>
+<script type="text/javascript">
+  $( document ).ready(function() { Localize.setLanguage('en');});
+</script>
+<!-- Matomo -->
+<script type="text/javascript">
+  var _paq = _paq || [];
+  /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+  _paq.push(["setDocumentTitle", document.domain + "/" + document.title]);
+  _paq.push(['trackPageView']);
+  _paq.push(['enableLinkTracking']);
+  (function() {
+    var u="https://piwik.1u1s.de/";
+    _paq.push(['setTrackerUrl', u+'piwik.php']);
+    _paq.push(['setSiteId', '77']);
+    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
+    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
+  })();
+</script>
+<noscript><p><img src="https://piwik.1u1s.de/piwik.php?idsite=77&amp;rec=1" style="border:0;" alt="" /></p></noscript>
+  </div>
+
+
+  </div>
+
+
+
+
+
+
+
+    <script src="https://dka575ofm4ao0.cloudfront.net/assets/status_manifest-fe51120c5309a42b8fe23d0af40c6d1ddf533e0e24ebfb16557e15cd82189121.js"></script>
+    <div id="cpt-notification-container"></div>
+    
+
+
+
+
+    <!-- all of the content_for stuff -->
+      <script src="https://dka575ofm4ao0.cloudfront.net/assets/register_subscription_form-589b657fec607087fc5c740c568270907310bc4f6aaa20256e70f01b103025ca.js"></script>
+
+  <script type="text/javascript">
+      $(function() {
+          SP.currentPage.registerSubscriptionForm('email');
+
+
+          SP.currentPage.registerSubscriptionForm('webhook');
+
+      });
+
+
+
+
+
+  </script>
+  <script src="https://dka575ofm4ao0.cloudfront.net/assets/status_common-c1b99d73ee7ab0fea796bd170723c1daac1381095a7dd7501a38ce6f333d86b3.js"></script>
+    <script>
+      SP.pollForChanges('/api/v2/status.json');
+    </script>
+
+  <script>
+    $(function() {
+      $('.tool').tooltipster({
+        animationDuration: 100,
+        contentAsHTML: true,
+        delay: 100,
+        theme: 'tooltipster-borderless',
+        functionInit: function (instance, helper) {
+          var $origin = $(helper.origin),
+              dataOptions = $origin.attr('data-tooltip-config');
+          if (dataOptions){
+            dataOptions = JSON.parse(dataOptions);
+            $.each(dataOptions, function(name, option){
+                instance.option(name, option);
+            });
+          }
+        }
+      });
+      // clicks on first tab in subscribe popout since we won't know which is first
+      // upon construction in the ruby code
+      $('.updates-dropdown-nav > a').eq(0).click();
+
+      // twitter follow button needs some margin
+      $('.twitter-follow-button').css('margin-right', '6px');
+    });
+
+    $(function() {
+      // open/close component groups
+      HRB.utils.djshook('component-group-opener').on('click', function() {
+        var groupParentIndicator = $(this).find('.group-parent-indicator');
+        groupParentIndicator.toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o').end().parent().toggleClass('open');
+        toggleGroup(groupParentIndicator)
+      });
+    });
+
+    $(function() {
+      HRB.utils.djshook('component-group-opener').on('keydown', function(event) {
+        if (event.key !== "Enter" && event.key !== " ") {
+          return;
+        }
+        event.preventDefault()
+        var groupParentIndicator = $(this).find('.group-parent-indicator');
+        groupParentIndicator.toggleClass('fa-plus-square-o').toggleClass('fa-minus-square-o').end().parent().toggleClass('open');
+        toggleGroup(groupParentIndicator)
+      });
+    });
+
+    function toggleGroup(groupParentIndicator) {
+      var isOpen = groupParentIndicator.attr('aria-expanded')
+      if (isOpen == 'false') {
+          groupParentIndicator.attr('aria-expanded', 'true');
+        } else {
+          groupParentIndicator.attr('aria-expanded', 'false');
+        }
+    }
+
+    $(function() {
+      $(document).on('ajax:complete', '.modal.in', function(e) {
+        // Close the active modal.
+        $('.modal.in').modal('hide');
+      });
+    });
+
+  </script>
+
+
+
+    
+  <script src="https://dka575ofm4ao0.cloudfront.net/packs/common-c3ca024b93f2e64d6f01.chunk.js"></script>
+  <script src="https://dka575ofm4ao0.cloudfront.net/packs/globals-3e964b59fb236dbfabd1.chunk.js"></script>
+
+    <script src="https://dka575ofm4ao0.cloudfront.net/packs/runtime-845beefc293f0b2f3a9a.js"></script>
+    
+    
+
+
+    <script>
+  window.addEventListener('load', function () {
+    const urlParams = new URLSearchParams(window.location.search);
+    const messageToken = urlParams.get('slack_message_token');
+    const channelName = escape(urlParams.get('channel_name'));
+
+    if(!!messageToken) {
+      switch(messageToken) {
+        case 'slack_auth_error':
+          HRB.utils.notify('The Slack authorization attempt was unsuccessful. Try again.', {cssClass:'error'});
+          break;
+        case 'subscribers_disabled_error':
+          HRB.utils.notify('Slack subscriptions are not enabled on this page.', {cssClass:'error'});
+          break;
+        case 'direct_message_channel_error':
+          HRB.utils.notify('Subscriptions aren’t supported in direct messages. Try subscribing again and choose a channel instead.', {cssClass:'error'});
+          break
+        case 'duplicate_error':
+          HRB.utils.notify("You're already subscribed to get Slack notifications in that channel.", {cssClass:'error'});
+          break;
+        case 'duplicate_private_channel_error':
+          HRB.utils.notify(`You're already subscribed to get Slack notifications in #${channelName}. Invite the @Statuspage app to that channel to start getting status updates.`, {cssClass: 'error'});
+          break;
+        case 'default_success':
+          HRB.utils.notify("You're now subscribed to get Statuspage updates in Slack!", {cssClass:'success'});
+          break;
+        case 'private_channel_success':
+          HRB.utils.notify(`IMPORTANT: Invite the @Statuspage app to your Slack channel #${channelName} to start getting status updates.`, {cssClass:'success'});
+          break;
+      }
+    }
+  });
+</script>
+
+    
+<!-- FOR FLASH NOTICES -->
+
+<!-- FOR ERROR -->
+
+
+    <script>
+  $(function() {
+    var $link = $('<span class="color-secondary powered-by"><a class="color-secondary" target="_blank" rel="noopener noreferrer nofollow" href="https://www.atlassian.com/software/statuspage?utm_campaign=www.ionos-status.com&amp;utm_content=SP-notifications&amp;utm_medium=powered-by&amp;utm_source=inapp">Powered by Atlassian Statuspage</a></span>');
+
+  	var setPoweredByStyles = function() {
+  		if (!$('.powered-by').length) {
+  			$link.appendTo($('.page-footer'))
+  		}
+  		$('.powered-by').attr('style', 'display: inline !important; visibility:visible !important; opacity: 1 !important; position:static !important; text-indent:0px !important; transform:scale(1) !important');
+  	}
+
+  	setInterval(setPoweredByStyles, 1000);
+  });
+</script>
+
+
+      <script src="https://cdn.localizejs.com/localize.js"></script>
+      <script>!function(a){if(!a.Localize){a.Localize={};for(var e=["translate","untranslate","phrase","initialize","translatePage","setLanguage","getLanguage","detectLanguage","untranslatePage","bootstrap","prefetch","on","off"],t=0;t<e.length;t++)a.Localize[e[t]]=function(){}}}(window);</script>
+
+      <script>
+        Localize.initialize({
+          key: 'KOtsb2y1jN93s',
+          defaultLanguage: 'en',
+          rememberLanguage: true
+        });
+      </script>
+
+
+
+  </body>
+</html>
